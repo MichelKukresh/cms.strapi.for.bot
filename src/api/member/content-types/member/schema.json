@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Подпищики"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "text"
+    },
+    "tgFirstName": {
+      "type": "string"
+    },
+    "tgSecondName": {
+      "type": "string"
+    },
+    "subscriptionStatus": {
+      "type": "boolean",
+      "default": false
+    },
+    "dateUnsubscribe": {
+      "type": "datetime"
+    },
+    "dateSubscribe": {
+      "type": "datetime"
+    },
+    "viewedMagnit": {
+      "type": "boolean",
+      "default": false
+    },
+    "utmSource": {
+      "type": "string"
+    },
+    "utmMedium": {
+      "type": "string"
+    },
+    "utmCampaign": {
+      "type": "string"
+    },
+    "utmContent": {
+      "type": "string"
+    },
+    "utmTerm": {
+      "type": "string"
+    },
+    "clientID": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

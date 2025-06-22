@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "channels",
+  "info": {
+    "singularName": "channel",
+    "pluralName": "channels",
+    "displayName": "ТГ каналы"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Название канала",
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "lidMagnit": {
+      "type": "text",
+      "default": "Ссылка на полезный ресурс",
+      "required": true
+    },
+    "deploymentSheets": {
+      "type": "text",
+      "default": "Ссылка на развертывание гугл скриптов",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "default": "Прочая информация о канале"
+    },
+    "chatId": {
+      "type": "string"
+    },
+    "invite": {
+      "type": "text",
+      "default": "Ссылка приглашения после добавления бота"
+    }
+  }
+}
