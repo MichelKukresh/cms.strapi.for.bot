@@ -529,9 +529,8 @@ export interface ApiChannelChannel extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<'\u041F\u0440\u043E\u0447\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E \u043A\u0430\u043D\u0430\u043B\u0435'>;
     invite: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'\u0421\u0441\u044B\u043B\u043A\u0430 \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u044F \u043F\u043E\u0441\u043B\u0435 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0431\u043E\u0442\u0430'>;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     lidMagnit: Schema.Attribute.Text &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'\u0421\u0441\u044B\u043B\u043A\u0430 \u043D\u0430 \u043F\u043E\u043B\u0435\u0437\u043D\u044B\u0439 \u0440\u0435\u0441\u0443\u0440\u0441'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -606,6 +605,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     page: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    rel_channel: Schema.Attribute.Relation<'oneToOne', 'api::channel.channel'>;
     subscriptionStatus: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     tgFirstName: Schema.Attribute.String;
